@@ -62,14 +62,6 @@ Sistema voltado para gerenciamento e automação de ações, com foco em produti
 
 ---
 
-## 📊 Estatísticas do GitHub
-
-![Vitor's GitHub stats](https://github-readme-stats.vercel.app/api?username=romavitordev&show_icons=true&theme=tokyonight)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=romavitordev&layout=compact&theme=tokyonight)
-
----
-
 ## 📫 Contato
 
 📸 Instagram: https://instagram.com/romart.photos  
