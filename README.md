@@ -73,7 +73,7 @@ Sistema voltado para gerenciamento e automação de ações, com foco em produti
 ## 📫 Contato
 
 📸 Instagram: https://instagram.com/romart.photos  
-💼 LinkedIn: (coloca seu link aqui)  
+💼 LinkedIn:  https://www.linkedin.com/in/romavitordev/ 
 
 ---
 
