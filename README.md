@@ -34,7 +34,6 @@ Fora do código, sou fotógrafo — e isso aparece no cuidado com interface, com
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 
 **Animação, 3D & Ferramentas**
 
@@ -102,15 +101,6 @@ Dois produtos atrás do mesmo login: o **painel do cliente** (alocar leads, abri
 **Stack:** Next.js • Node.js • Express • PostgreSQL • JWT
 
 🔗 [Repositório](https://github.com/romavitordev/TriAmici) · [Layout](https://github.com/romavitordev/layout_triamici)
-
----
-
-### ⚖️ Rafael Pedroso Advocacia
-**Site e sistema de captação para um escritório de advocacia.** Landing page com triagem do contato por área do direito, avisos de LGPD e sigilo, proteção contra spam (rate limit e honeypot) e confirmação automática por e-mail.
-
-**Stack:** HTML/CSS/JS • Node.js • Express • SQL Server
-
-🔗 [Repositório](https://github.com/romavitordev/portfolioadv_rafael)
 
 ---
 
