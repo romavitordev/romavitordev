@@ -1,211 +1,163 @@
 # 👋 Olá, eu sou o Vitor Roma
 
-💻 **Desenvolvedor Full Stack**
-🎓 Estudante de Análise e Desenvolvimento de Sistemas — UNIP
+💻 **Desenvolvedor Full Stack** · cofundador da **Roma & Buganza**
+🎓 Análise e Desenvolvimento de Sistemas — UNIP
 📍 Sorocaba, SP — Brasil
 
-Desenvolvo **sites, sistemas e produtos digitais**, unindo desenvolvimento full stack, interfaces modernas e soluções orientadas a problemas reais.
+Desenvolvo **sites, sistemas e produtos digitais** do protótipo ao produto no ar: landing pages com direção visual forte, sistemas com painel administrativo, SaaS com regras de negócio próprias e aplicativos desktop.
 
-Minha stack principal envolve **Next.js, React, TypeScript, Node.js, PostgreSQL e Prisma**, com experiência em APIs, autenticação, bancos de dados, painéis administrativos, automações e integrações.
+Minha stack principal é **Next.js, React e TypeScript** no front e **Node.js, Python/FastAPI, PostgreSQL e Prisma** no back. No dia a dia trabalho com autenticação, APIs REST, motores de regras, automações, web scraping, testes e deploy.
 
-Também tenho experiência com **Python e automação de processos**, além de fotografia e criação visual — áreas que influenciam meu trabalho com interfaces e experiência do usuário.
+Fora do código, sou fotógrafo — e isso aparece no cuidado com interface, composição e experiência do usuário.
 
----
-
-## 🌐 Roma & Buganza
-
-**Estúdio de desenvolvimento focado em sites, sistemas e produtos digitais.**
-
-Meu portfólio reúne projetos próprios, projetos para clientes e experimentos de produto.
-
-🔗 **[Acessar portfólio](https://romavitordev.github.io/portfoliorb/)**
+🌐 **[Portfólio Roma & Buganza](https://romavitordev.github.io/portfoliorb/)** · 📷 **[Roma Fotografias](https://romavitordev.github.io/romafotografias/)**
 
 ---
 
-# 🛠️ Tecnologias
+## 🛠️ Tecnologias
 
-### Frontend
+**Frontend**
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge\&logo=nextdotjs\&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge\&logo=react\&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge\&logo=typescript\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge\&logo=tailwind-css\&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-### Backend & Dados
+**Backend & Dados**
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge\&logo=nodedotjs\&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge\&logo=express\&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge\&logo=postgresql\&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge\&logo=prisma\&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 
-### Ferramentas & UI
+**Animação, 3D & Ferramentas**
 
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge\&logo=git\&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge\&logo=supabase\&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge\&logo=framer\&logoColor=white)
-![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge\&logo=greensock\&logoColor=white)
-
----
-
-# 🚀 Projetos em Destaque
-
-## 🌐 Roma & Buganza
-
-**Estúdio de desenvolvimento — sites, sistemas e produtos digitais.**
-
-Meu portfólio profissional reúne projetos próprios, trabalhos para clientes e experimentos desenvolvidos ao longo da minha trajetória.
-
-O projeto também representa a identidade visual e a abordagem que utilizo para desenvolvimento de produtos digitais.
-
-🔗 **[Acessar portfólio](https://romavitordev.github.io/portfoliorb/)**
-🔗 **[Ver repositório](https://github.com/romavitordev/portfoliorb)**
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 
 ---
 
-## 🏠 Buganza Imóveis
+## 🚀 Projetos em destaque
 
-**Sistema full stack para gerenciamento e apresentação de imóveis.**
+### 📊 Leads — Motor de Reservas
+**SaaS proprietário em desenvolvimento.** Em vez de vender listas, distribui *reservas exclusivas* de empresas para prestadores de serviço, com um motor de alocação baseado em regras.
 
-Aplicação desenvolvida para uma imobiliária, combinando catálogo público, gerenciamento de conteúdo e área administrativa.
+Dois produtos atrás do mesmo login: o **painel do cliente** (alocar leads, abrir o WhatsApp do contato, registrar resultado, gerir territórios, planos) e o **console interno** (saúde do inventário, contas e parâmetros do motor) — que mostra *quantos*, nunca *quem*.
 
-**Stack:** Next.js • TypeScript • Prisma • PostgreSQL • Supabase
+**Stack:** Python • FastAPI • PostgreSQL • React • TypeScript • Vite
 
-**Destaques:**
-
-* 🏠 Catálogo de imóveis
-* 🔐 Autenticação e área administrativa
-* 🖼️ Gerenciamento de mídia
-* 🔎 Busca e filtros
-* 📱 Interface responsiva
-* 💬 Integrações externas
-* 🗄️ Banco de dados PostgreSQL
-
-🔗 **[Ver repositório](https://github.com/romavitordev/buganza_imoveis)**
+🔗 **[Vitrine do layout (dados de exemplo)](https://romavitordev.github.io/local_bnss_layout/)** · [Repositório da vitrine](https://github.com/romavitordev/local_bnss_layout)
+> 🔒 O backend é privado.
 
 ---
 
-## 🎣 Fisgou
+### 📡 Radar de Clientes
+**Aplicativo desktop para Windows, distribuído com licença.** Atualização automática com verificação de assinatura digital antes de cada instalação.
 
-**Produto próprio voltado para a comunidade de pescadores.**
-
-Uma plataforma social construída para reunir recursos de comunidade, descoberta de pesqueiros e funcionalidades específicas para diferentes perfis de usuários.
-
-**Stack:** Next.js • TypeScript • Monorepo • pnpm
-
-**Destaques:**
-
-* 📰 Feed social
-* ❤️ Curtidas e comentários
-* 👤 Perfis e seguidores
-* 💬 Mensagens e grupos
-* 🎣 Pesqueiros e check-ins
-* 🐟 Coleção de espécies
-* 🔔 Notificações
-* 🛒 Recursos para vendedores
-* 🛡️ Moderação
-
-🔗 **[Ver repositório](https://github.com/romavitordev/fisgou)**
+🔗 [Repositório de downloads](https://github.com/romavitordev/radar-de-clientes-downloads)
+> 🔒 Código-fonte privado.
 
 ---
 
-## 📊 Leads — Motor de Reservas
+### 🏠 Buganza Imóveis
+**Catálogo imobiliário completo para uma imobiliária.** Catálogo público com busca e filtros, conversão via WhatsApp e área administrativa protegida para gerenciar imóveis e mídia.
 
-**SaaS proprietário em desenvolvimento.**
+**Stack:** Next.js 14 • TypeScript • Prisma • PostgreSQL • Supabase
 
-Produto voltado à geração, organização e distribuição inteligente de oportunidades comerciais para prestadores de serviços digitais.
-
-O projeto envolve uma arquitetura full stack com **motor de regras, processamento de dados, autenticação, painéis distintos por função, automações e uma suíte extensa de testes**.
-
-**Stack:** Python • Node.js • PostgreSQL • REST API
-
-> 🔒 Projeto proprietário — detalhes da arquitetura e do modelo de negócio não são públicos.
+🔗 [Repositório](https://github.com/romavitordev/buganza_imoveis) · [Layout estático](https://github.com/romavitordev/layout_buganza)
 
 ---
 
-## 📸 Tri Amici Photography Academy
+### 🎣 Fisgou
+**Produto próprio: rede social para a comunidade de pescadores.** Feed, curtidas e comentários, perfis e seguidores, mensagens e grupos, pesqueiros com check-in, a coleção de espécies *Fisgados*, notificações, recursos para vendedores e moderação.
 
-**Plataforma institucional full stack para uma escola de fotografia.**
+**Stack:** Next.js 14 • TypeScript • Monorepo pnpm
 
-Projeto desenvolvido para combinar apresentação institucional, captação de interessados e gerenciamento administrativo.
+🔗 [Repositório](https://github.com/romavitordev/fisgou) · [Layout (front com dados mock)](https://github.com/romavitordev/fisgou_layout)
+
+---
+
+### 👻 Arena Paranormal
+**Jogo de luta 3D que roda no navegador.** Combate em arena com movimentação livre, defesa, esquiva, dash, combos por combinação de botões e especiais cinematográficos. Suporta controle de PlayStation/Xbox e dois jogadores no teclado, com scripts que validam as regras do elenco e geram a ficha de habilidades a partir dos dados.
+
+**Stack:** Three.js • Vite • JavaScript
+
+🔗 [Repositório](https://github.com/romavitordev/arena-paranormal)
+
+---
+
+### 📸 Tri Amici Photography Academy
+**Plataforma institucional full stack para uma escola de fotografia.** Site institucional, pré-inscrições, painel administrativo com autenticação, envio de e-mails e exportação de dados.
 
 **Stack:** Next.js • Node.js • Express • PostgreSQL • JWT
 
-**Destaques:**
-
-* 📚 Site institucional
-* 📝 Sistema de pré-inscrições
-* 🔐 Autenticação administrativa
-* 📊 Painel de gerenciamento
-* 📧 Envio de e-mails
-* 📄 Exportação de dados
-* 🔌 API REST
-
-🔗 **[Ver repositório](https://github.com/romavitordev/TriAmici)**
+🔗 [Repositório](https://github.com/romavitordev/TriAmici) · [Layout](https://github.com/romavitordev/layout_triamici)
 
 ---
 
-## 🍔 Baltazar Burger
+### ⚖️ Rafael Pedroso Advocacia
+**Site e sistema de captação para um escritório de advocacia.** Landing page com triagem do contato por área do direito, avisos de LGPD e sigilo, proteção contra spam (rate limit e honeypot) e confirmação automática por e-mail.
 
-**Landing page experimental focada em experiência visual.**
+**Stack:** HTML/CSS/JS • Node.js • Express • SQL Server
 
-Projeto desenvolvido para explorar direção visual, animações e interações baseadas em scroll.
-
-**Stack:** Next.js • GSAP • ScrollTrigger • Lenis • Framer Motion
-
-🔗 **[Ver repositório](https://github.com/romavitordev/baltazarburger_lndpage)**
+🔗 [Repositório](https://github.com/romavitordev/portfolioadv_rafael)
 
 ---
 
-# 🧠 O que eu desenvolvo
+### 📷 Roma Fotografias
+**Meu portfólio de fotografia, montado como uma exposição.** HTML, CSS e JavaScript puros, sem build: as salas são geradas a partir de um único manifesto JSON e um GitHub Action otimiza as fotos a cada upload.
+
+🔗 **[Ver ao vivo](https://romavitordev.github.io/romafotografias/)** · [Repositório](https://github.com/romavitordev/romafotografias)
+
+---
+
+### ✨ Sites-experiência
+Projetos para explorar direção visual, animação guiada por scroll e microinterações:
+
+- ☕ **Sereno — café & torrefação** (conceitual): vídeo controlado pelo scroll, galeria arrastável com inércia, som ambiente opcional e versão para `prefers-reduced-motion`. → [Repositório](https://github.com/romavitordev/serenocafe_lndpage)
+- 🍔 **Baltazar Burger**: hamburgueria artesanal na brasa em Sorocaba. → [Repositório](https://github.com/romavitordev/baltazarburger_lndpage)
+
+**Stack:** Next.js 14 • GSAP + ScrollTrigger • Lenis • Framer Motion • Tailwind CSS
+
+---
+
+## 🧠 O que eu desenvolvo
 
 ```text
-FULL STACK
-├── Aplicações Web
-├── Sistemas Administrativos
-├── APIs REST
-├── Autenticação
-└── Bancos de Dados
+PRODUTOS DIGITAIS          FULL STACK
+├── SaaS                   ├── Aplicações web
+├── Produtos próprios      ├── Painéis administrativos
+├── Apps desktop           ├── APIs REST
+└── MVPs                   ├── Autenticação e permissões
+                           └── Bancos de dados
 
-PRODUTOS DIGITAIS
-├── SaaS
-├── Produtos próprios
-├── Sistemas para clientes
-└── MVPs
-
-FRONTEND
-├── Interfaces responsivas
-├── Design Systems
-├── Animações
-└── Experiências interativas
-
-AUTOMAÇÃO
-├── Python
-├── Web Scraping
-└── Automação de processos
+FRONTEND                   AUTOMAÇÃO
+├── Interfaces responsivas ├── Python
+├── Animação e scroll      ├── Web scraping
+├── 3D no navegador        ├── Motores de regras
+└── Design systems         └── CI/CD com GitHub Actions
 ```
 
 ---
 
-# 📫 Contato
+## 📫 Contato
 
-💼 **LinkedIn**
-https://www.linkedin.com/in/romavitordev/
-
-📸 **Instagram**
-https://instagram.com/romart.photos
-
-🌐 **Portfólio**
-https://romavitordev.github.io/portfoliorb/
+💼 **LinkedIn:** [linkedin.com/in/romavitordev](https://www.linkedin.com/in/romavitordev/)
+🌐 **Portfólio:** [romavitordev.github.io/portfoliorb](https://romavitordev.github.io/portfoliorb/)
+📷 **Fotografia:** [romavitordev.github.io/romafotografias](https://romavitordev.github.io/romafotografias/) · [@romart.photos](https://instagram.com/romart.photos)
 
 ---
 
 <p align="center">
-  <b>Transformando ideias em produtos digitais.</b>
-</p>
-
-<p align="center">
-  Roma & Buganza — sites, sistemas e produtos digitais. 🚀
+  <b>Roma & Buganza — sites, sistemas e produtos digitais.</b>
 </p>
