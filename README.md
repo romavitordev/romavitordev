@@ -1,5 +1,5 @@
 <a href="https://romavitordev.github.io/portfoliorb/">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0%3A6D4AFF%2C35%3A2D8BFF%2C70%3A00D4C8%2C100%3AA6FF4D&height=230&section=header&text=Vitor%20Roma&fontSize=70&fontColor=0B0A12&fontAlignY=36&animation=fadeIn&desc=Roma%20%26%20Buganza%20%20%7C%20%20sites%2C%20sistemas%20e%20produtos%20digitais&descSize=20&descAlignY=58" width="100%" alt="Vitor Roma, Roma & Buganza: sites, sistemas e produtos digitais">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0%3A6D4AFF%2C35%3A2D8BFF%2C70%3A00D4C8%2C100%3AA6FF4D&height=230&section=header&text=Vitor%20Roma&fontSize=70&fontColor=0B0A12&fontAlignY=36&animation=fadeIn&desc=Roma%20e%20Buganza%20%20-%20%20sites%2C%20sistemas%20e%20produtos%20digitais&descSize=20&descAlignY=58" width="100%" alt="Vitor Roma, Roma & Buganza: sites, sistemas e produtos digitais">
 </a>
 
 <div align="center">
