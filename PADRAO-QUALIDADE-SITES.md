@@ -1,6 +1,6 @@
 # Padrão de Qualidade de Sites (Front + Back)
 
-Checklist base para todo site/sistema entregue pela Roma & Buganza.
+Checklist base para todo site/sistema entregue pela Roma & Buganza. O projeto de referência interna é o buganza_imoveis (seção 6).
 Use como ponto de partida em cada projeto e copie para o repo do cliente quando precisar marcar o status (`[x]` feito, `[~]` parcial, `[ ]` pendente).
 
 Atualizado em: 10/10/2026 (prompts de Refero, Cult UI e ShaderGradient adicionados)
@@ -256,3 +256,92 @@ Exemplo de URL: `https://www.shadergradient.co/customize?animate=on&cDistance=3.
 - [ ] Favicon, ícones e imagem de compartilhamento (OG image).
 - [ ] Página 404 personalizada.
 - [ ] Cliente treinado no painel (quando houver).
+
+---
+
+## 6. Referência interna: buganza_imoveis (Marcelo Imóveis)
+
+O [buganza_imoveis](https://github.com/romavitordev/buganza_imoveis) é o projeto mais completo do estúdio e o modelo a seguir em sites com painel. Next.js 14 (App Router) + TypeScript + Tailwind + Prisma/Postgres (Neon) + Supabase Storage, com painel administrativo, chatbot, leads e testes. Quando for começar um site novo, abra os arquivos citados abaixo e copie o padrão.
+
+### 6.1 Estrutura de pastas (modelo para projetos com painel)
+
+```
+app/
+  page.tsx, layout.tsx          # home + layout raiz (metadata, JSON-LD, tema)
+  (rotas públicas)/             # ex.: imoveis/(lista), imoveis/[slug]
+  painel-<nome>/                # painel com nome NÃO óbvio (não /admin)
+  api/
+    <publicas>/                 # leitura via DTO, rate limit nas que gravam
+    admin/                      # CRUD; toda rota chama o guarda de sessão
+  error.tsx, not-found.tsx, robots.ts, sitemap.ts, opengraph-image.tsx
+components/                     # componentes do site
+components/admin/               # componentes do painel
+lib/                            # regras e utilitários, um assunto por arquivo
+  marca.ts                      # nome, CRECI/CNPJ, redes, e-mail: fonte única
+  dto.ts                        # o que pode sair do banco para o público
+  session.ts, ratelimit.ts, totp.ts, storage.ts, revalidate.ts, site-url.ts
+prisma/schema.prisma, seed.ts
+scripts/                        # up, banco local, seed demo, retenção, importação
+tests/                          # Vitest: regras de negócio e segurança
+middleware.ts                   # 1ª camada de proteção do painel
+README.md, DEPLOY.md, CHECKLIST-DEPLOY.md, INFORMACOES-PENDENTES.md, .env.example
+```
+
+### 6.2 Padrões para copiar
+
+**Segurança**
+- **Proteção em duas camadas:** o `middleware.ts` barra `/painel-*` e `/api/admin`, *e* cada handler começa com `barrarSemSessao()` / cada página com `exigirSessao()` (`lib/session.ts`). Se o matcher do middleware falhar, a rota continua protegida.
+- **Teste que trava a regressão:** `tests/admin-guard.test.ts` lê todas as rotas de `app/api/admin` e quebra se alguma não chamar o guarda, ou se consultar o banco antes de chamá-lo.
+- **DTO com allowlist** (`lib/dto.ts`): campo por campo, nunca spread do objeto do Prisma. Campo novo no banco não vaza para o site sozinho. Testado em `tests/dto.test.ts` (ex.: `precoInterno` e endereço completo nunca saem).
+- **Dado sensível só no servidor:** o número do WhatsApp fica em `lib/whatsapp-server.ts` (`import "server-only"`); os botões apontam para `/api/contato`, que redireciona. Nada de `NEXT_PUBLIC_` para dado que não pode ir ao navegador.
+- **Headers de segurança e CSP comentada** em `next.config.mjs` (CSP, HSTS, X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy), com o motivo de cada exceção.
+- **Sessão:** JWT (jose) em cookie `httpOnly`/`secure`/`sameSite=lax` de 8h; `AUTH_SECRET` obrigatório, sem valor padrão no código; 2FA TOTP opcional.
+- **Rate limit** (`lib/ratelimit.ts`): Upstash Redis em produção, memória em dev, e *fail-open* (se o Redis cair, o site não para).
+- **Rotas públicas que gravam** (`app/api/leads/route.ts`): rate limit por IP, honeypot que responde "ok" para o bot, validação e corte de tamanho em cada campo.
+- **Painel escondido:** nome não óbvio (`/painel-mis`), `noindex` no layout do painel e **fora** do `robots.txt`, que é público.
+
+**SEO e performance**
+- `metadata` com `title.template`, `metadataBase` via `lib/site-url.ts` e `generateMetadata` por página de item.
+- JSON-LD no layout (`RealEstateAgent`) e por item (anúncio + `BreadcrumbList`).
+- `notFound()` dentro do `generateMetadata` para dar 404 real (sem soft-404) e `permanentRedirect` de URL antiga ou código para o slug.
+- `sitemap.ts` dinâmico lendo o banco (só itens ativos, com `lastModified`); `opengraph-image.tsx` gerada.
+- **ISR + invalidação na hora:** `revalidate = 300` nas páginas públicas e `revalidarPaginasPublicas()` (`lib/revalidate.ts`) em toda mutação do painel.
+- **Imagens:** `deviceSizes`/`imageSizes` enxutos em `next.config.mjs` (menos transformações cobradas na Vercel), compressão no navegador antes do upload (`lib/comprimir-imagem.ts`: lado máximo 1920px, JPEG 0.82, nunca trava o upload), upload direto para o Supabase com URL assinada e blur placeholder (`lib/blur.ts`).
+- `Cache-Control` com `s-maxage` + `stale-while-revalidate` nas APIs públicas de leitura.
+
+**Design e UX**
+- **Marca num arquivo só** (`lib/marca.ts`): nome, nome curto, CRECI, cidade, e-mail, redes, crédito do estúdio e dados do controlador LGPD. Trocar a marca é editar um arquivo.
+- **Tema claro/escuro por tokens:** variáveis CSS em `globals.css` (`:root` e `[data-theme="dark"]`) ligadas ao Tailwind (`black` = tinta, `white` = papel, `secundario`), sem `dark:` espalhado. Script inline no `<head>` aplica o tema antes da primeira pintura (sem piscar).
+- `prefers-reduced-motion` respeitado nas animações (cena SVG do hero).
+- Mensagem do WhatsApp pré-preenchida que **combina com o rótulo do botão** ("Agendar visita" pede visita) e leva o código do anúncio.
+- **Checklist de qualidade dentro do painel** (`components/admin/QualidadeAnuncio.tsx`): o cliente vê o que falta (3+ fotos, descrição com 300+ caracteres…) antes de publicar.
+- `loading.tsx`, `error.tsx` e `not-found.tsx` próprios, inclusive no painel.
+
+**LGPD**
+- Consentimento no formulário, finalidade declarada em comentário na rota, política em `/privacidade`.
+- **Retenção que cumpre a política:** `scripts/retencao.mjs` apaga o que passou do prazo; roda em modo de ensaio por padrão e só apaga com `--aplicar`. Prazos do script e da página andam juntos.
+- Medição de audiência própria e pseudonimizada (`lib/track.ts` + `/api/track`), sem depender de pixel de terceiros.
+
+**Operação e documentação**
+- `npm run up`: sobe banco local, espera ficar pronto, cria tabelas na primeira vez e abre o site, tudo num comando.
+- `db:seed` (só admin, para produção) separado de `db:demo` (dados de exemplo): o catálogo de produção nasce vazio.
+- `.env.example` explicando **cada** variável (ex.: URL *pooled* vs *direta* do Neon, por que o WhatsApp é server-only, o que acontece se ficar vazio).
+- README com stack, como rodar, seção **Qualidade** (`npm test`, `npm run lint`, `npx tsc --noEmit`), seção **Segurança** e diagrama da estrutura.
+- `CHECKLIST-DEPLOY.md` em fases (decisões do cliente → contas → conteúdo → deploy → verificação → pós-lançamento) e `INFORMACOES-PENDENTES.md` com o que falta o cliente mandar.
+- Comentários explicam o **porquê** das decisões (custo, segurança, LGPD), não o que o código faz.
+
+### 6.3 O que levar para o próximo projeto (resumo)
+
+- [ ] `lib/marca.ts` como fonte única da marca.
+- [ ] DTO com allowlist + teste para os campos que nunca podem vazar.
+- [ ] Guarda de sessão no handler + teste que varre as rotas do painel.
+- [ ] `next.config` com CSP e headers de segurança.
+- [ ] Rate limit + honeypot + validação em toda rota pública que grava.
+- [ ] Dados sensíveis (telefone, chaves) só no servidor.
+- [ ] ISR + `revalidatePath` nas mutações.
+- [ ] Tokens de tema em variáveis CSS e script anti-flash.
+- [ ] `sitemap.ts`, `robots.ts`, `opengraph-image.tsx`, JSON-LD e 404 real.
+- [ ] Script de retenção alinhado com a política de privacidade.
+- [ ] `npm run up`, `.env.example` comentado, README + CHECKLIST-DEPLOY + INFORMACOES-PENDENTES.
+
+> Pontos a melhorar no próprio buganza: migrar para Next 15/React 19 quando for mexer na base; trocar `db push` por migrações versionadas (`prisma migrate`) antes do próximo ajuste de schema em produção; adicionar CI (lint + tsc + test) no GitHub Actions; o README cita `tests/painel-mis-guard.test.ts`, mas o arquivo se chama `tests/admin-guard.test.ts`.
