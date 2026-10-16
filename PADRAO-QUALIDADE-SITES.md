@@ -3,7 +3,7 @@
 Checklist base para todo site/sistema entregue pela Roma & Buganza. O projeto de referência interna é o buganza_imoveis (seção 6).
 Use como ponto de partida em cada projeto e copie para o repo do cliente quando precisar marcar o status (`[x]` feito, `[~]` parcial, `[ ]` pendente).
 
-Atualizado em: 10/10/2026 (prompts de Refero, Cult UI e ShaderGradient adicionados)
+Atualizado em: 16/10/2026 (seção 1.2: modelos 3D com Claude + Blender MCP, detalhada em [MODELOS-3D-BLENDER-MCP.md](MODELOS-3D-BLENDER-MCP.md))
 
 ---
 
@@ -165,6 +165,16 @@ Exemplo de URL: `https://www.shadergradient.co/customize?animate=on&cDistance=3.
 - Tipos: `plane`, `sphere`, `waterPlane`. Cores em `color1..3` (use as cores da marca). `grain="on"` dá textura de filme.
 - Performance: `pixelDensity` 1 no mobile, `lazyLoad` ligado, `animate="off"` quando o usuário prefere menos movimento, e no Next carregar com `dynamic(() => import(...), { ssr: false })`.
 
+### 1.2 Modelos 3D (Claude + Blender MCP)
+
+Para modelos 3D realistas e exclusivos (produto, imóvel, prato, objeto da marca), o Claude modela **do zero** controlando o Blender pelo [Blender MCP](https://github.com/ahujasid/blender-mcp), revisa por screenshots a cada etapa e exporta um `.glb` otimizado para o site. Guia completo, com setup, regras para o `CLAUDE.md`, prompts, materiais, exportação e código de exibição: **[MODELOS-3D-BLENDER-MCP.md](MODELOS-3D-BLENDER-MCP.md)**.
+
+Resumo:
+- Blender MCP para objeto fiel e exclusivo; gerador IA (Meshy, Tripo, Rodin) ou Sketchfab para objeto genérico; código (ShaderGradient, Three.js) para efeito decorativo.
+- Medidas reais antes de modelar, pipeline em etapas e screenshots em 4 vistas depois de cada etapa.
+- `.glb` com Draco, ≤ 5 MB (ideal ≤ 2 MB), 50k a 150k triângulos para hero.
+- Render do Blender como poster/fallback; 3D carregado sob demanda com `<model-viewer>` ou React Three Fiber.
+
 ### Regras de uso das referências
 
 - [ ] Direção visual definida a partir de referências (anotar no README quais estilos/sites inspiraram).
@@ -174,6 +184,7 @@ Exemplo de URL: `https://www.shadergradient.co/customize?animate=on&cDistance=3.
 - [ ] Animações e efeitos (Cult UI, ShaderGradient) respeitam `prefers-reduced-motion`.
 - [ ] Efeitos pesados (WebGL/shader) carregam depois do conteúdo (lazy / `dynamic(..., { ssr: false })`), têm fallback estático (imagem ou gradiente CSS) e são desligados ou simplificados no celular fraco.
 - [ ] Efeito decorativo nunca atrapalha a leitura nem o CTA.
+- [ ] Modelos 3D seguem os critérios de aceite do [MODELOS-3D-BLENDER-MCP.md](MODELOS-3D-BLENDER-MCP.md#9-critérios-de-aceite) (`.glb` otimizado, poster de fallback, lazy load, 60 fps no celular).
 
 ---
 
